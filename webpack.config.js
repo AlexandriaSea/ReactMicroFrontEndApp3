@@ -4,7 +4,7 @@ const Dotenv = require('dotenv-webpack');
 const deps = require("./package.json").dependencies;
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:3010/",
+    publicPath: "https://reactmicrofrontendapp3.netlify.app/",
   },
 
   resolve: {
@@ -44,7 +44,7 @@ module.exports = (_, argv) => ({
       name: "studentApp3",
       filename: "remoteEntry.js",
       remotes: {
-        'studentApp1' : 'studentApp1@https://reactmicrofrontendapp1.netlify.app'
+        'studentApp1' : 'studentApp1@https://reactmicrofrontendapp1.netlify.app/remoteEntry.js'
       },
       exposes: {},
       shared: {
